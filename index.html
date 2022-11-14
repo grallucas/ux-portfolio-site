@@ -1,0 +1,121 @@
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        <title>Lucas Gral</title>
+        <link rel="stylesheet" href="./style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="content-language" content="en-us">
+        <meta name="google" content="notranslate" /> 
+        <meta name="robots" content="noindex">
+    </head>
+    <!--
+        about page:
+        everything below first paragraph
+        more info on direct supply
+        less dense
+        fix projects title at top
+        resume in iframe
+        new tab for links
+        resume pdf (not w/ header)
+        more buttony: invert links on hover
+        text height = image height in projs
+        projs horiz padding
+        projectr ppage subheader
+        no subheader on homepage
+        make hl text orange
+        link color
+        call to action buttons
+
+        interview questions:
+        1) Is the "about me" partition of the home page too dense; should a separate "about me" page be made?
+        2) Is my portfolio scalable? Is it suited to me easily adding more projects.
+        3) Thoughts on the potential layout for the project page? Left part: summary & insights then technical details below, right side: image(s) of the project
+        4) Impression of the page's theme?
+
+        
+        1) General impressions of the "about me" half of the home page? How would you change it if you could?
+        2) If you had a portfolio that looked like this, what would you change?
+        3) What would you think of a 3 or 4 column project page? Each column would be a section of the project description, and the last would be images of the project.
+        4) What are your thoughts on the color choices? Is anything difficult to read or notice?
+
+        50/50 proj/abt
+
+        x proj = x abt
+        y = y
+        abt space vert
+        same padding from center    
+
+
+        can go under word limit: but it should be thoroughly explained in each category. Provide enough content about it.
+        subsubheaders for proj subsections
+        can move stuff to tech details
+        lines under (not over) images on project page
+        match up lines between abt and projs
+    -->
+    <body>
+        <header>
+            <h1 style="text-align: center;">{Lucas Gral}</h1>
+            <p class="subtitle" style="text-align: center;"><!--Lucas = ["Programmer", "Student", "tbd"]-->Programmer & Student</p>
+            <div id="contact">
+                <p style="color: var(--tex2)"><b style="color: var(--hl1)">Call:</b> (262)327-5833</p>
+                <p style="color: var(--tex2)"><b style="color: var(--hl1)">Email:</b> grall@msoe.edu</p>
+            </div>
+        </header>
+        <div id="about">
+            <h3 style="text-align: center;">Who I Am</h3>
+            <p style="padding-bottom: 93px;">
+            <!--<br><br>-->
+            <img id="me-img" src="./me.png">
+            <span style="color: var(--hl1);">Greetings!</span><br><br>
+            I am currently a student at MSOE for computer science.<br>
+            I also work part-time at Direct Supply on the data science team where me and my group are working on a project that aims to classify Direct Supply products in images.
+            </p>
+            <p style="padding-bottom: 87px; padding-top: 87px;">
+            <span style="color: var(--hl1);">More About Me</span><br><br>
+            I'm also on the board of the MSOE AI Club (MAIC) as an <i style="color: var(--hl1);">education-coordinator</i>.<br>
+            My responsibilities in this position are to:<br>
+            - Prepare and deliver interactive club activities<br>
+            - Maintain the <a target="_blank" rel="noopener noreferrer" href="http://msoe-maic.com/">club website</a><br>
+            - Assist in club planning.
+            </p>
+            <p>
+            <span style="color: var(--hl1);">Resume Preview</span><br><br>
+            Some things I have experience in are: AI, Linux/Unix systems, music production, video editing, web development.<br><br>
+            More Info:<br>
+            - Check out my projects in the list on the right<br>
+            - My <a target="_blank" rel="noopener noreferrer" href="./resume.pdf">resume</a> 📄
+            </p>
+            <span style="line-height: 25px;"><br></span> <!--hacky fix-->
+        </div>
+        <div id="proj">
+            <h3 style="text-align: center;">Projects</h3>
+            <div class="proj-card">
+                <h4 style="color: var(--hl1);">C Ray Tracer</h4>
+                <p>
+                <img src="./raytracer.PNG">
+                An experiment to see how difficult it would be to write a ray tracer in the C language.<br><br>
+                The results: it's surprisingly easy!<br><br><br>
+                <a class="linkbtn" href="./proj-raytrace.html">- see more -</a>
+                </p>
+            </div>
+            <div class="proj-card">
+                <h4 style="color: var(--hl1);">AI Music Generation</h4>
+                <p>
+                <img src="./musicgen.PNG">
+                A team project stemming from MAIC: generating music with AI.<br><br>
+                A paper was published with the details.<br><br><br><br>
+                <a class="linkbtn" href="./proj-aimusic.html">- see more -</a>
+                </p>
+            </div>
+            <div class="proj-card">
+                <h4 style="color: var(--hl1);">Procedural Brainf**k Compiler</h4>
+                <p>
+                <img src="./brainf.PNG">
+                Started as an attempt to write a compiler.<br><br>
+                Once the initial compiler was working, I added a custom feature to the language.<br><br><br>
+                <a class="linkbtn" href="./proj-bfcomp.html">- see more -</a>
+                </p>
+            </div>
+        </div> 
+    </body>
+</html>

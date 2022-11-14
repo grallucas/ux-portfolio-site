@@ -1,0 +1,130 @@
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        <title>Lucas Gral - Procedural Brainf**k Compiler</title>
+        <link rel="stylesheet" href="./style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="content-language" content="en-us">
+        <meta name="google" content="notranslate" />
+        <meta name="robots" content="noindex">
+    </head>
+    <body>
+        <header>
+            <h1 style="text-align: center;">{Lucas Gral}</h1>
+            <p class="subtitle" style="text-align: center;">Procedural Brainf**k Compiler</p>
+            <div id="contact">
+                <p style="color: var(--tex2)"><b style="color: var(--hl1)">Call:</b> (262)327-5833</p>
+                <p style="color: var(--tex2)"><b style="color: var(--hl1)">Email:</b> grall@msoe.edu</p>
+            </div>
+            <a class="linkbtn" style="color: var(--hl2); position: absolute; left: 100px; top: 20px; left: 20px;" href="./index.html">To Home</a>
+        </header>
+        <table style="position: absolute; top:var(--toph); left: 0px; width: 100%; text-align: center;">
+            <tr>
+                <td rowspan="2">
+                    <h3>Summary</h3>
+                    <p> 
+                        <b style="color: var(--hl1)">Context</b><br><br>
+                        <!--<br>
+                        ....................<br><br>-->
+                        <a target="_blank" rel="noopener noreferrer" href="https://en.wikipedia.org/wiki/Brainfuck">Brainf**k is the name of an actual programming language.</a> It is meant to be a silly language, and it's so simple that it's difficult to do anything useful in it. However, its simplicity lends it to being a good learning tool.<br>
+                        ....................<br><br>
+                        This was a personal individual project that I worked on over the course of a few weeks during my freshman year.
+
+                    </p>
+                    <p> 
+                        <b style="color: var(--hl1)">Process</b><br><br>
+                        The process of implementing this project was casual. There was little planning, and I did what I felt like in each stage of development.<br>
+                        ....................<br><br>
+                        Like the <a href="./proj-raytrace.html">ray tracer project</a>, I would say this process is adequate for a casual project like this.
+                    </p>
+                    <p> 
+                        <b style="color: var(--hl1)">Task</b><br><br>
+                        The task was to write a compiler that turns brainf**k code into assembly code.
+                    </p>
+                    <p> 
+                        <b style="color: var(--hl1)">Results/Deliverable</b><br><br>
+                        The final product was a command-line program that takes a brainf**k file and produces an assembly file for further compilation.<br>
+                        ....................<br><br>
+                        I also added a feature to the language that didn't previously exist, that feature being “procedures” to group pieces of code.
+                    </p>
+                    <p> 
+                        <b style="color: var(--hl1)">Time/Schedule</b><br><br>
+                        Being a casual project, there were no hard deadlines or schedules. I worked on this project on-and-off over a few weeks in my freshman year.
+                    </p>
+                    <p> 
+                        <b style="color: var(--hl1)">Constraints/Challenges</b><br><br>
+                        Like the ray tracer project, using the C language for this project was a self-imposed constraint to improve my knowledge of C.<br>
+                        ....................<br><br>
+                        Producing assembly (rather than interpreting) the brainf**k code was another challenge. Producing assembly is more difficult than writing an interpreter.
+                    </p>
+                </td>
+                <td rowspan="2" style="background: linear-gradient(to right, var(--bg2), var(--bg1));">
+                    <h3>Insights</h3>
+                    <p> 
+                        <b style="color: var(--hl1)">Things Done Well</b><br><br>
+                        I made a working brainf**k compiler, and it supports a feature that wasn't in the original language. <br>
+                        ....................<br><br>
+                        Turning the input code into executable assembly is probably what I did best, I even included some minor optimization of the input code.<br>
+                        ....................<br><br>
+                        Something else I did well was making the tool work like other regular command-line compilers. You just have to supply the filename, and it generates the resulting assembly code in a new file to be further compiled. The alternative would be something like forcing the user to type their code In the terminal rather than supplying it in a file.
+                    </p>
+                    <p> 
+                        <b style="color: var(--hl1)">Skills Gained/Improved</b><br><br>
+                        <!-- - I increased my knowledge of programming in the C language.<br><br> -->
+                        - I vastly improved my assembly knowledge. Particularly, the compiler emits assembly of the “nasm” format.<br><br>
+                        - I also improved my understanding of the C programming language.<br><br>
+                        - Most of all, I gained important knowledge about how to write compilers in general. While this project only compiled a simple language, the skills I've gained from it can be applied to more useful languages.
+                    </p>
+                    <p> 
+                        <b style="color: var(--hl1)">Improvement Opportunities</b><br><br>
+                        This project went very well, so there was little room for improvement in the final result. One minor annoyance is the syntax for calling procedures.<br>
+                        ....................<br><br>
+                        Currently, you prepend a dollar sign to the procedure-name for it to be called. While it's only a minor detail, I believe that the extra dollar sign is ultimately unnecessary; it was just a quick fix for the problem of figuring out whether a procedure is being defined or called.
+                    </p>
+                </td><td rowspan="3" style="background: var(--bg1); width: 34%;">
+                    <h3>Gallery</h3>
+                    <p class="img-capt">A snippet of brainf**k code in a file.</p>
+                    <img src="./brainf1.PNG"><br>
+                    <p class="img-capt">Some assembly code generated by my compiler.</p>
+                    <img src="./brainf2.PNG"><br>
+                    <p class="img-capt">A snippet of the compiler code which generates assembly depending on the input code.</p>
+                    <img src="./brainf3.PNG"><br>
+                </td>
+            </tr>
+            <tr></tr>
+            <tr>
+                <td colspan="2" style="background: linear-gradient(to right, var(--bg2), var(--bg1)); border-top: 1px solid #888; ">
+                    <h3>Technical Details</h3>
+                    <p>
+                        <b style="color: var(--hl1)">The way procedures work</b><br><br>
+                        Pieces of brainf**k code can be put between two curly braces and a leading name to define a procedure. E.G.,<br><br>
+                        <code>
+                            addl{<br>
+                                <[>>+<<-]><br>
+                                >[<+<+>>-]<<br>
+                            }
+                        </code><br><br>
+                        Once a procedure is defined, you can call it later by writing its name with a dollar sign in front (E.G, <code>$addl</code>). Procedures can be called from anywhere; even inside other procedures.<br><br>
+                    </p>
+                    <p>
+                        Besides procedures, I also added a custom instruction. The slash character '/' prints a specified number.<br><br>
+                        In the original brainf**k language, you are only able to print the ascii character of numbers, and not the numbers themselves.
+                    </p>
+                    <p>
+                        If you're familiar with C programs: <a target="_blank" rel="noopener noreferrer" href="./compiler.c">here is the latest source code</a> for this project.<br><br>
+                    </p>
+                </td>
+            </tr>
+        </table>
+        <!--div style="position: absolute; top:calc(30px + var(--toph)); left: 0px; width: 100%; text-align: center;">
+            <h2>Summary</h2>
+            <p>The</p>
+            <h2>Insights</h2>
+            <p>The</p>
+            <h2>Technical Details</h2>
+            <p>The</p>
+            <h2>Gallery</h2>
+            <p>images</p>
+        </div-->
+    </body>
+</html>
